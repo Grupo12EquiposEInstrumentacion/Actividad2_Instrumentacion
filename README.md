@@ -77,4 +77,10 @@ Simulaciones realizadas para verificar el comportamiento del sistema:
   
 IMAGENES DE WOKWI FUNCIONANDO  
 
+
+
+El siguiente ejempli ilustra como el algoritmo PID hace que la temperatura descienda y se ajuste al valor que queremos mantener en las baterías
+
+![CASO2_PID](https://github.com/user-attachments/assets/42fd210c-40b3-461a-b503-dda0467b948f)
+
 ---
