@@ -35,7 +35,9 @@ En esta sección se incluirán los recursos relacionados con el hardware del pro
 
 - 📐 **Diagrama de conexiones**
 
-AÑADIR IMAGEN DEL DIAGRAMA DE CONEXIONES CREADO CON KICAD
+El sistema completo HARDWARE se ve como en la imagen adjunta:
+![Captura de pantalla 2025-05-31 171320](https://github.com/user-attachments/assets/40dfb17d-a249-4767-ade1-f7b67af29273)
+
   
 - 📋 **BOM (Bill of Materials)**: listado de todos los componentes utilizados
 
@@ -235,14 +237,37 @@ Simulaciones realizadas para verificar el comportamiento del sistema:
 
 - 🔍 **Pruebas del funcionamiento en WOKWI**
   
-IMAGENES DE WOKWI FUNCIONANDO  
+A continuación adjuntaremos una serie de imagenes y .gifs que demuestren el correcto funcionamiento del código completo.
+-   *MODO 1: En este modo se van a visualizar todos los parámetros del ambiente, implementarán modos de control para cuando la temperatura sea <0ºC apage la carga de baterías y muestre un mensaje por el display LCD. También se controla la humedad, la distancia a la boya de algún objeto y la intensidad lumínica.*
 
-**AQUI VA EL CASO 1 DE LOS .gif, SE ADJUNTA ARRASTRANDO EL ARCHIVO DESDE EL EXPLORADOR DE WINDOWS HASTA AQUI. ASI SE CARGA. NO ME  DEJA PORQUE INDRA LO TIENE BLOQUEADO PROBAR CON OTRO ORDENADOR.**
+  ![Captura de pantalla 2025-05-31 171659](https://github.com/user-attachments/assets/64447560-dc93-4da0-a30c-1600cfbb5c9f)
 
-El siguiente ejemplo ilustra cómo el algoritmo PID hace que la temperatura descienda y se ajuste al valor que queremos de temperatura en las baterías, siendo este de 20 °C. A medida que se aproxima a 20ºC se observa como la "correción" es más lenta y no van tán rápido.
+-   *MODO 2: En este modo se ejecutará el Algoritmo PID para el control de la temperatura, en el primer modo fijaremos la temperatura ambiente y en el segundo se muestra como actua el algoritmo PID recalculando el valor de la temperatura continuamente hasta ajustarlo a nuestro valor objetivo 25ºC* <br>
+Fijando la temperatura ambiente -><br>
+![Captura de pantalla 2025-05-31 172312](https://github.com/user-attachments/assets/8172b0e3-e3c8-4ac2-8b63-42456b228e7b)
 
-El video es un fragmento donde se observan dos elementos clave: el primero es la pantalla LCD, que a diferencia del primer video cambia su interfaz y muestra cómo se autoajusta la temperatura gracias al algoritmo PID; y el LED RGB, que según la temperatura que haya en ese momento, cumple una función u otra. Es decir, si el LED está en AZUL, la temperatura está por encima de 20 °C (±1 °C) y se activa el ventilador; si está en el rango de 20 °C (±1 °C), se pondrá en VERDE; y si está por debajo, se activan las resistencias y se pone en ROJO.
+El siguiente ejemplo ilustra cómo el algoritmo PID hace que la temperatura descienda y se ajuste al valor que queremos de temperatura en las baterías, siendo este de 25 °C. A medida que se aproxima a 25ºC se observa como la "correción" es más lenta y no van tán rápido.
 
-![CASO2_PID](https://github.com/user-attachments/assets/42fd210c-40b3-461a-b503-dda0467b948f)
+El video es un fragmento donde se observan dos elementos clave: el primero es la pantalla LCD, que a diferencia del primer video cambia su interfaz y muestra cómo se autoajusta la temperatura gracias al algoritmo PID; y el LED RGB, que según la temperatura que haya en ese momento, cumple una función u otra. Es decir,<br> 
+         -   si el LED está en AZUL, la temperatura está por encima de 25 °C (±1 °C) y se activa el ventilador;<br>
+         -   si está en el rango de 25 °C (±1 °C), se pondrá en VERDE; <br>
+         -   y si está por debajo, se activan las resistencias y se pone en ROJO.<br>
+         ![CONTROL TEMPERATURA](https://github.com/user-attachments/assets/a4a00db8-5f12-4326-8cc0-a4e38cf2bf2a)
+
+-   *MODO 3: Simulación del nivel de oleaje, el LED indicará el nivel de oleaje según su color, si esta en verde el mar está en calma, si esta en amarillo el oleaje empieza a ser peligroso y si esta en rojo el oleaje está al máximo y por el temporal se muestra en la pantalla un mensaje de perdida de conexión y se alerta con sonidos.*
+
+![Captura de pantalla 2025-05-31 172904](https://github.com/user-attachments/assets/be1c5f15-a2c5-4508-ba4e-fd064581a76e)
+
+-   *MODO 4: En esta imagen se observa el modo de funcionamiento que mide la velocidad del viento, en este modo según la velocidad del tiempo medida (valor introducido a través del potenciometro) se moverá el servo más o menos rápido.*
+
+![Captura de pantalla 2025-05-31 172919](https://github.com/user-attachments/assets/d4b07a5d-d2ed-4f9b-b5be-b59929ba2d27)
+
+-   *MODO 5: En este modo se implementa una simulación de la activación de las resistencias termicas encargadas de calentar la batería cuando desciende de 0ºC, se puede observar como variando la potencia que entregamos se calienta más o menos rápido, pero a consecuencia de consumir más baterías.*
+  
+![CALENTADOR DE RESISTENCIAS TERMICAS](https://github.com/user-attachments/assets/624b6aa5-8443-4908-b22a-5bdbe3eeff65)
+
+-   *MODO 6: En este modo se muestra el control de la luminosidad, observamos los dos LDR que "indican" si habrá más luz en el OESTE o en el ESTE, según ese valor de luminosidad se orienta el servo a esa posición y si la luminosidad en el LDR del ESTE es mucha (el sol estará saliendo) o será pleno día por ende la cadena de LEDs se apagará, si el valor en Lux es pequeño ya estará comenzando a anochecer y se encenderán los LEDs.*
+
+  ![CONTROL LUMINOSIDAD](https://github.com/user-attachments/assets/c9360a19-c686-4c0a-afa5-b581ab6001bc)
 
 ---
