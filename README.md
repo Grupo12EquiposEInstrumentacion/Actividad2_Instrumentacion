@@ -237,7 +237,8 @@ Simulaciones realizadas para verificar el comportamiento del sistema:
 
 - 🔍 **Pruebas del funcionamiento en WOKWI**
   
-A continuación adjuntaremos una serie de imagenes y .gifs que demuestren el correcto funcionamiento del código completo.
+A continuación adjuntaremos una serie de imagenes y .gifs que demuestren el correcto funcionamiento del código completo. Este es el enlace para acceder a nuestro proyecto en WOKWI: https://wokwi.com/projects/432483156211621889<br>
+
 -   *MODO 1: En este modo se van a visualizar todos los parámetros del ambiente, implementarán modos de control para cuando la temperatura sea <0ºC apage la carga de baterías y muestre un mensaje por el display LCD. También se controla la humedad, la distancia a la boya de algún objeto y la intensidad lumínica.*
 
   ![Captura de pantalla 2025-05-31 171659](https://github.com/user-attachments/assets/64447560-dc93-4da0-a30c-1600cfbb5c9f)
