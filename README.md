@@ -5,11 +5,11 @@ El objetivo es documentar todo el proceso de diseño, implementación y prueba d
 
 ## 👨‍🎓 Integrantes del equipo
 
-- Adrián García
-- Carlos Martínez
-- Inés Martínez
-- Manuel Torres
-- José Adrián Sabina
+- Adrián García Alonso 
+- Carlos Martínez Rodríguez
+- Inés Martínez Romero
+- Manuel Torres Pineda 
+- José Adrián Sabina Pamo
    
 ## 📑 Descripción del Readme
 
