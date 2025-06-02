@@ -23,9 +23,13 @@ El objetivo es documentar todo el proceso de diseño, implementación y prueba d
 
 ## 🧭 Introducción
 
-En la actividad 2 de la asignatura Equipos e Instrumentación Electrónica vamos a implementar modulos que optimicen el control de las variables medidas en la actividad 1, exactamente sobre las variables de luminosidad y temperatura. 
-Para el control optimizado de estos paramétros hemos implementado algoritmos, el algoritmo utilizado en el control de la temperatura es el algoritmo PID, muy usado en controles de temperatura del hogar, etc. 
-Para el control de la luminosidad hemos implementado un servo y una cadena de LEDs, estos elementos quieren imitar la realidad pero de forma simulada en WOKWI, el servo hace referencia al motor de una placa solar que sigue la dirección del sol desde que amanece hasta que anochece, según como se encuentre la luz estará en una posición u otra, luego la cadena de LEDs hacen referencia a la luz que puede tener la boya integrada que según vaya cayendo la noche más se ilumina.
+La Actividad 2 tiene como objetivo ampliar las funcionalidades desarrolladas previamente en la Actividad 1 mediante la implementación de módulos de control avanzados sobre variables ambientales críticas, en particular la temperatura y la iluminación. A partir de las mediciones obtenidas en la fase inicial del proyecto, se han incorporado algoritmos de control automático que permiten optimizar la respuesta del sistema frente a cambios en el entorno.
+ 
+Para el control de la temperatura, se ha implementado un algoritmo PID (Proporcional-Integral-Derivativo), ampliamente utilizado en sistemas de climatización doméstica e industrial por su capacidad para mantener un valor deseado con precisión y estabilidad. Este algoritmo actúa sobre una variable simulada que representa el comportamiento térmico del sistema, regulando su respuesta de forma progresiva.
+ 
+En cuanto a la iluminación, se ha desarrollado una lógica de control que integra un servomotor y una cadena de LEDs. El servomotor simula el mecanismo de orientación de una placa solar que sigue el movimiento aparente del sol a lo largo del día, utilizando sensores de luz para determinar la dirección óptima. Por su parte, los LEDs representan la iluminación artificial de la boya, aumentando su intensidad conforme disminuye la luz natural, especialmente durante el atardecer o la noche.
+ 
+Todo el sistema ha sido desarrollado y probado en el entorno de simulación WOKWI, permitiendo una evaluación visual y funcional de cada uno de los subsistemas integrados.
 
 ---
 
